@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8" />
+	<title>angularjs-6--this-controller-as--controllers</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="main.js"></script> 
+</head>
+<body>
+    
+<div ng-controller=" mainCtrl">
+  <div ng-controller="firstCtrl as firstCtrl">
+    <div ng-controller="secondCtrl as secondCtrl">
+      {{mainCtrl.myLesson}}
+      <button ng-click = 'mainCtrl.addLesson()'> addLesson </button>
+    </div>
+  </div>
+</div>
+  
+
+</body>
+</html>
